@@ -4,7 +4,9 @@
 https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 show databases #for showing all database
+
 create database database_name  #create database 
+
 use database_name #use database
 
 
