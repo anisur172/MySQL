@@ -5,7 +5,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 #for showing all database
 
-    $ show databases 
+    show databases 
 
 #create database 
 
