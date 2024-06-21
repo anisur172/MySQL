@@ -1,23 +1,23 @@
 # MySQL
 
-#Collect dataset from this link or collect from attchment section
+# Collect dataset from this link or collect from attchment section
 https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
-#for showing all database
+# for showing all database
 
     show databases 
 
-#create database 
+# create database 
 
     create database database_name 
 
-#use database
+# use database
 
     use database_name 
 
 
-#Create table inside of database(bank_details is table name) and enterted data is  column name. default,day,month is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
-#Coloum Names with data type: 
+# Create table inside of database(bank_details is table name) and enterted data is  column name. default,day,month is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
+# Coloum Names with data type: 
 
     CREATE TABLE IF NOT EXISTS bank_details (
         age INT,
@@ -39,12 +39,12 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
         y VARCHAR(30)
     );
 
-SELECT * FROM bank_details #show the table
-
-INSERT INTO bank_details VALUES (58,"management","married","tertiary","no",2143,"yes","no","unknown",5,"may",261,1,-1,0,"unknown","no") #insert the one value/row inside of table 
-
-# inset the blug values/rows inside of table
-    $ INSERT INTO bank_details VALUES 
+# Show the table
+    SELECT * FROM bank_details 
+# Insert the one value/row inside of table 
+    INSERT INTO bank_details VALUES (58,"management","married","tertiary","no",2143,"yes","no","unknown",5,"may",261,1,-1,0,"unknown","no") 
+# Inset the blug values/rows inside of table
+    INSERT INTO bank_details VALUES 
     (58,"management","married","tertiary","no",2143,"yes","no","unknown",5,"may",261,1,-1,0,"unknown","no"),
     (44,"technician","single","secondary","no",29,"yes","no","unknown",5,"may",151,1,-1,0,"unknown","no"),
     (33,"entrepreneur","married","secondary","no",2,"yes","yes","unknown",5,"may",76,1,-1,0,"unknown","no"),
@@ -146,30 +146,39 @@ INSERT INTO bank_details VALUES (58,"management","married","tertiary","no",2143,
     (39,"technician","married","secondary","no",0,"yes","no","unknown",5,"may",203,1,-1,0,"unknown","no"),
     (46,"management","married","tertiary","no",229,"yes","no","unknown",5,"may",197,1,-1,0,"unknown","no");
 
-    $ select count(*) FROM bank_details # showing all rows of table
-    $ select count(*) FROM bank_details #count the rows number or check how many data have indide of table
-
-    $ SELECT * FROM bank_details # show all data inside of table
-
-    $ SELECT age , loan , job from bank_details #filter the table with age, loan and job  column
-
-    $ select `default` from bank_details # default is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
-
-select * from bank_details limit 8 # filter the only 8 rows from this table
-
-select * from bank_details where age = 33 #filter the data by age
-select * from bank_details where age > 40 #filter
-select * from bank_details where age = 60 #filter
-select * from bank_details where age = 60 and job = 'retired' #multipule filter
-
-SELECT * FROM bank_details #show table full data
-
-select * from bank_details where education = 'unknown' or marital = 'single' #multipule condition filter
-select * from bank_details where (education = 'unknown' or marital = 'single') and balance < 500 #multipule condition filter
-
-select distinct job from bank_details #show unique value of column
-
-select *from bank_details order by age #defult filter by accending order
-select *from bank_details order by marital #defult filter by accending order
-select *from bank_details order by age desc # filter by deccending order
-select *from bank_details order by marital desc # filter by deccending order
+# Showing all rows of table
+    select count(*) FROM bank_details 
+# Count the rows number or check how many data have indide of table  
+    select count(*) FROM bank_details 
+# Show all data inside of table
+    SELECT * FROM bank_details 
+# Filter the table with age, loan and job  column
+    SELECT age , loan , job from bank_details 
+# Default is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
+    select `default` from bank_details 
+# Filter the only 8 rows from this table
+    select * from bank_details limit 8 
+# Filter the data by age
+    select * from bank_details where age = 33 
+# Filter
+    select * from bank_details where age > 40 
+# Filter
+    select * from bank_details where age = 60
+# Multipule filter
+    select * from bank_details where age = 60 and job = 'retired' 
+# Show table full data
+    SELECT * FROM bank_details 
+# Multipule condition filter
+    select * from bank_details where education = 'unknown' or marital = 'single' 
+# Multipule condition filter
+    select * from bank_details where (education = 'unknown' or marital = 'single') and balance < 500 
+# Filter unique value of column
+    select distinct job from bank_details
+# Defult filter by accending order
+    select *from bank_details order by age 
+# Defult filter by accending order
+    select *from bank_details order by marital 
+# Filter by deccending order
+    select *from bank_details order by age desc
+# Filter by deccending order
+    select *from bank_details order by marital desc 
