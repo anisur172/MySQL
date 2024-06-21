@@ -3,11 +3,12 @@
 #Collect dataset from this link or collect from attchment section
 https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
-show databases #for showing all database
-
-create database database_name  #create database 
-
-use database_name #use database
+#for showing all database
+show databases 
+#create database 
+create database database_name 
+#use database
+use database_name 
 
 
 #Create table inside of database(bank_details is table name) and enterted data is  column name. default,day,month is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
