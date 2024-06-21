@@ -9,17 +9,17 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 #create database 
 
-    $ create database database_name 
+    create database database_name 
 
 #use database
 
-    $ use database_name 
+    use database_name 
 
 
 #Create table inside of database(bank_details is table name) and enterted data is  column name. default,day,month is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
 #Coloum Names with data type: 
 
-    $ CREATE TABLE IF NOT EXISTS bank_details (
+    CREATE TABLE IF NOT EXISTS bank_details (
         age INT,
         job VARCHAR(30),
         marital VARCHAR(30),
@@ -39,9 +39,9 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
         y VARCHAR(30)
     );
 
-    $ SELECT * FROM bank_details #show the table
+SELECT * FROM bank_details #show the table
 
-    $ INSERT INTO bank_details VALUES (58,"management","married","tertiary","no",2143,"yes","no","unknown",5,"may",261,1,-1,0,"unknown","no") #insert the one value/row inside of table 
+INSERT INTO bank_details VALUES (58,"management","married","tertiary","no",2143,"yes","no","unknown",5,"may",261,1,-1,0,"unknown","no") #insert the one value/row inside of table 
 
 # inset the blug values/rows inside of table
     $ INSERT INTO bank_details VALUES 
