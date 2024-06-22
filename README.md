@@ -194,3 +194,5 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select * from bank_details where loan = 'yes'
 # 5. Try to find out the average balance for all the people whose job role is admin 
     select avg(balance) AS average_blance_for_admin from bank_details where job = 'admin.'
+# 6. Try to find out a record retired job whose age is below 45
+    select * from bank_details where job = 'retired' and age < 45
