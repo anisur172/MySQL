@@ -196,5 +196,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select avg(balance) AS average_blance_for_admin from bank_details where job = 'admin.'
 # 6. Try to find out a record retired job whose age is below 45
     select * from bank_details where job = 'retired' and age < 45
-# 7. Try to find out a record where education is primary and person is jobless 
+# 7. Try to find out a record where education is primary and the person is jobless 
     select * from bank_details where job = 'retired' and education = 'primary'
+# 8. Try to find of a record whose bank account is having a negative balance
+    select * from bank_details where balance < 0
