@@ -190,5 +190,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select * from bank_details where balance = (select min(balance) from bank_details)
 # 3. Try to find out who has a maximum balance
     select * from bank_details where balance = (select max(balance) from bank_details)
-# 4. Try to prepare a list of all the people who is having loans
+# 4. Try to prepare a list of all the people who have loans
     select * from bank_details where loan = 'yes'
+# 6. Try to find out the average balance for all the people whose job role is admin 
+    select avg(balance) AS average_blance_for_admin from bank_details where job = 'admin.'
