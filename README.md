@@ -183,7 +183,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
 # Filter by descending order
     select *from bank_details order by marital desc 
 
-## Problem
+## Problem Solving
 # 1. Try to find out the average balance
     select avg(balance) as average_balance from bank_details
 # 2. Try to find out who has a minimum balance
@@ -194,9 +194,11 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select * from bank_details where loan = 'yes'
 # 5. Try to find out the average balance for all the people whose job role is admin 
     select avg(balance) AS average_blance_for_admin from bank_details where job = 'admin.'
-# 6. Try to find out a record retired job whose age is below 45
+# 6. Try to find-out a record retired job whose age is below 45
     select * from bank_details where job = 'retired' and age < 45
-# 7. Try to find out a record where education is primary and the person is jobless 
+# 7. Try to find-out a record where education is primary and the person is jobless 
     select * from bank_details where job = 'retired' and education = 'primary'
-# 8. Try to find of a record whose bank account is having a negative balance
+# 8. Try to find a record whose bank account has a negative balance
     select * from bank_details where balance < 0
+# 9. Try to find out a record of who does not have a house
+    select * from bank_details where housing = "no"
