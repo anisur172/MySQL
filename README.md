@@ -188,5 +188,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select avg(balance) as average_balance from bank_details
 # 2. Try to find out who has a minimum balance
     select * from bank_details where balance = (select min(balance) from bank_details)
-# 3. Try to find out who is having a maximum balance
+# 3. Try to find out who has a maximum balance
     select * from bank_details where balance = (select max(balance) from bank_details)
+# 4. Try to prepare a list of all the people who is having loans
+    select * from bank_details where loan = 'yes'
