@@ -148,13 +148,13 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 # Showing all rows of table
     select count(*) FROM bank_details 
-# Count the rows number or check how many data have indide of table  
+# Count the row number or check how many data have inside the table  
     select count(*) FROM bank_details 
-# Show all data inside of table
+# Show all data inside of a table
     SELECT * FROM bank_details 
-# Filter the table with age, loan and job  column
+# Filter the table with age, loan, and job  column
     SELECT age , loan , job from bank_details 
-# Default is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
+# Default is a keywork of SQL if you need to keep it as a column name then need to use `` this symbol. Otherwise can't work
     select `default` from bank_details 
 # Filter the only 8 rows from this table
     select * from bank_details limit 8 
@@ -172,13 +172,21 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select * from bank_details where education = 'unknown' or marital = 'single' 
 # Multipule condition filter
     select * from bank_details where (education = 'unknown' or marital = 'single') and balance < 500 
-# Filter unique value of column
+# Filter the unique value of the column
     select distinct job from bank_details
-# Defult filter by accending order
+# Defult filter by ascending order
     select *from bank_details order by age 
-# Defult filter by accending order
+# Defult filter by ascending order
     select *from bank_details order by marital 
-# Filter by deccending order
+# Filter by descending order
     select *from bank_details order by age desc
-# Filter by deccending order
+# Filter by descending order
     select *from bank_details order by marital desc 
+
+## Problem
+# 1. Try to find out the average balance
+    select avg(balance) as average_balance from bank_details
+# 2. Try to find out who has a minimum balance
+    select * from bank_details where balance = (select min(balance) from bank_details)
+# 3. Try to find out who is having a maximum balance
+    select * from bank_details where balance = (select max(balance) from bank_details)
