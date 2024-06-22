@@ -1,6 +1,6 @@
 # MySQL
 
-# Collect dataset from this link or collect from attchment section
+# Collect the dataset from this link or collect from the attachment section
 https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
 # for showing all database
@@ -16,7 +16,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     use database_name 
 
 
-# Create table inside of database(bank_details is table name) and enterted data is  column name. default,day,month is a keywork of SQL if you need to kept it as a column name then need to use `` this symbole. Otherwise can't work
+# Create a table inside of the database(bank_details is the table name) and the entered data is  the column name. default, day, the month is a keywork of SQL if you need to keep it as a column name then you need to use `` this symbol. Otherwise can't work
 # Coloum Names with data type: 
 
     CREATE TABLE IF NOT EXISTS bank_details (
