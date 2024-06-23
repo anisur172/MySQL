@@ -202,3 +202,14 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     select * from bank_details where balance < 0
 # 9. Try to find out a record of who does not have a house
     select * from bank_details where housing = "no"
+
+# Create function.
+
+# Show the bank_details table by using the function
+    DELIMITER &&
+    create procedure bank_details_table()
+    begin
+    	select * from bank_details ;
+    end &&
+    
+    call bank_details_table()
