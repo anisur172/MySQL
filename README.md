@@ -203,7 +203,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
 # 9. Try to find out a record of who does not have a house
     select * from bank_details where housing = "no"
 
-# Create function.
+# Create function by procedure.
 
 # Show the bank_details table by using the function
     DELIMITER &&
@@ -231,3 +231,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     END &&
     
     call sel_job_edu('admin.','secondary')
+
+#Create subtable by View
+    create view bank_view as select age, job, balance, marital, education from bank_details ;
+    select avg(balance) AS average_blance_for_admin from bank_view where job = 'admin.'
