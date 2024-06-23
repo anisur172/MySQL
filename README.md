@@ -213,3 +213,13 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     end &&
     
     call bank_details_table()
+
+# Dinamic function: Create a function to find out a list of all the people who have and haven't any loans.
+    DELIMITER &&
+    create procedure loan_details(IN a varchar(30)) 
+    begin
+        select * from bank_details where loan = a ;
+    END &&
+    
+    call loan_details( 'no' )
+    call loan_details( 'Yes' )
