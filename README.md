@@ -223,3 +223,11 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     
     call loan_details( 'no' )
     call loan_details( 'Yes' )
+# Dinamic function: Create a function with 2 variables.  where you can filter by education and Job status.
+    DELIMITER &&
+    create procedure sel_job_edu (In j varchar(30) , IN e Varchar(30))
+    begin
+    	select * from bank_details where job = j and education = e ;
+    END &&
+    
+    call sel_job_edu('admin.','secondary')
