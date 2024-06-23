@@ -233,5 +233,6 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     call sel_job_edu('admin.','secondary')
 
 #Create subtable by View
+
     create view bank_view as select age, job, balance, marital, education from bank_details ;
     select avg(balance) AS average_blance_for_admin from bank_view where job = 'admin.'
