@@ -256,3 +256,11 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     Decoration Varchar(30),
     `Pattern Type` Varchar(30),
     Recommendation int)
+# Put the bluck value/data inside of the table from file by given path
+    LOAD DATA INFILE
+    'E:/AttributeDataSet(DessDataset)-2.csv'
+    into table dress
+    FIELDS TERMINATED by ','
+    ENCLOSED by '"'
+    LINES TERMINATED by ' \n '
+    IGNORE 1 ROWS ;
