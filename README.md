@@ -272,5 +272,6 @@ Go to according to this path **# C:\ProgramData\MySQL\MySQL Server 8.0**  you wi
 you will be found.= **# secure-file-priv="C:/ProgramData/MySQL/MySQL Server 8.0/Uploads"** So remove the path from there. **# secure-file-priv=" "** and Save then try to run the SQL code
  * Some person code will be run and some people face the same problem. There are 2 solution
    1. Restart the PC and try again to run the code
-   2. Try to open the Notepad ++ with the administrator then again try and restart 
-Another way is to search the service in your Windows search box and find the MYSQL and restart it.
+   2. Try to open the Notepad ++ with the administrator then again try and restart
+      
+Another way is to search the service in your Windows search box find the MYSQL and restart it.
