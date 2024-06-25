@@ -274,4 +274,16 @@ you will be found.= **# secure-file-priv="C:/ProgramData/MySQL/MySQL Server 8.0/
    1. Restart the PC and try again to run the code
    2. Try to open the Notepad ++ with the administrator then again try and restart
       
-Another way is to search the service in your Windows search box find the MYSQL and restart it.
+Another way is to search the service in your Windows search box find the MYSQL and restart it. Then run again 
+
+    LOAD DATA INFILE 'E:/AttributeDataSet.csv'
+    INTO TABLE dress
+    FIELDS TERMINATED BY ','
+    ENCLOSED BY '"'
+    LINES TERMINATED BY '\n'
+    IGNORE 1 ROWS;
+
+That's a problem is solved 
+![image](https://github.com/anisur172/MySQL/assets/123252451/f1af2793-88ba-4464-94ec-554aed76d811)
+
+
