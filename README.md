@@ -256,7 +256,7 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     Decoration Varchar(30),
     `Pattern Type` Varchar(30),
     Recommendation int)
-# Put the bluck value/data inside of the table from file by given path
+# Put the bluck value/data inside of the table from file by the given path
     LOAD DATA INFILE
     'E:/AttributeDataSet(DessDataset)-2.csv'
     into table dress
@@ -264,3 +264,13 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
     ENCLOSED by '"'
     LINES TERMINATED by ' \n '
     IGNORE 1 ROWS ;
+A maximum person faced the problem " MySQL server is running with the-secure-file-priv" , This problem needs to be solved from the admin side they will give the permission. 
+For the Local server, This can be solved by the below instruction.
+1. Go to **"C" Drive** - **Program Data** (By default this folder is a hidden folder) so, Go to view and show the hidden file then will show the Program Data
+![image](https://github.com/anisur172/MySQL/assets/123252451/0b27a557-9cd7-4ebc-9705-15e2899752ee)
+Go to according to this path **# C:\ProgramData\MySQL\MySQL Server 8.0**  you will find **"my"** name file open with this file with Notepad ++ and sartch "Secure-file-priv"
+you will be found.= **# secure-file-priv="C:/ProgramData/MySQL/MySQL Server 8.0/Uploads"** So remove the path from there. **# secure-file-priv=" "** and Save then try to run the SQL code
+ * Some person code will be run and some people face the same problem. There are 2 solution
+   1. Restart the PC and try again to run the code
+   2. Try to open the Notepad ++ with the administrator then again try and restart 
+Another way is to search the service in your Windows search box and find the MYSQL and restart it.
