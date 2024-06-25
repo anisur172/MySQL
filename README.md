@@ -236,3 +236,23 @@ https://archive.ics.uci.edu/ml/datasets/bank+marketing
 
     create view bank_view as select age, job, balance, marital, education from bank_details ;
     select avg(balance) AS average_blance_for_admin from bank_view where job = 'admin.'
+
+
+# DATASET:2 Dress 
+
+# Create a table inside of database
+    create table if not exists dress(
+    Dress_ID int,
+    Style varchar(30),
+    Price Varchar(30),
+    Rating int,
+    Size varchar(30),
+    Season Varchar(30),
+    NeckLine Varchar(30),
+    SleeveLength Varchar(30),
+    waiseline Varchar(30),
+    Material Varchar(30),
+    FabricType Varchar(30),
+    Decoration Varchar(30),
+    `Pattern Type` Varchar(30),
+    Recommendation int)
