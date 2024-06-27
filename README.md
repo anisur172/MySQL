@@ -1,4 +1,4 @@
-# MySQL
+# MySQL.
 
 # Collect the dataset from this link or collect from the attachment section
 https://archive.ics.uci.edu/ml/datasets/bank+marketing
